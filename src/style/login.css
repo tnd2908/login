@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+  }
+html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background-color: #f6f6f6;
+  }
+  ::selection{
+    background: #0f9ea3;
+    color: #fff;
+  }
+  .wrapper{
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  }
+  .wrapper .title-text{
+    display: flex;
+    width: 200%;
+  }
+  .wrapper .title{
+    width: 50%;
+    font-size: 35px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  .wrapper .slide-controls{
+    position: relative;
+    display: flex;
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 6px;
+  }
+  .slide-controls .slide{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+  }
+  .slide-controls label.signup, .slide-controls label.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slide-controls .slider-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background-color: tan;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  #signup:checked ~ .slider-tab{
+    left: 50%;
+  }
+  #signup:checked ~ label.signup{
+    color: #fff;
+    cursor: default;
+    user-select: none;
+  }
+  #signup:checked ~ label.login{
+    color: #000;
+  }
+  #login:checked ~ label.signup{
+    color: #000;
+  }
+  #login:checked ~ label.login{
+    cursor: default;
+    user-select: none;
+  }
+  .wrapper .form-container{
+    width: 100%;
+    overflow: hidden;
+  }
+  .form-container .form-inner{
+    display: flex;
+    width: 200%;
+  }
+  .form-container .form-inner form{
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  .form-inner form .field{
+    height: 45px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .form-inner form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 16px;
+    border-style: none;
+    transition: all 0.3s ease;
+    background-color: #eee;
+  }
+  .form-inner form .field input:focus{
+    outline: none;
+    border-style: none;
+  }
+  .form-inner form .field input::placeholder{
+    color: #999;
+    transition: all 0.3s ease;
+  }
+  form .field input:focus::placeholder{
+    color: #b3b3b3;
+  }
+  .form-inner form .pass-link{
+    margin-top: 5px;
+  }
+  .form-inner form .signup-link{
+    text-align: center;
+    margin-top: 30px;
+  }
+  .form-inner form .pass-link a,
+  .form-inner form .signup-link a{
+    color: #f81d83;
+    margin: 10px 0;
+    display: block;
+    text-decoration: none;
+  }
+  .form-inner form .pass-link a:hover,
+  .form-inner form .signup-link a:hover{
+    text-decoration: none;
+    cursor: pointer;
+  }
+  form .btn button{
+    height: 45px;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    border-style: none;
+    font-size: 18px;
+  }
